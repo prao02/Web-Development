@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book My Ticket</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script language="javascript">
+		function validateform(){
+			var mail=document.forms["form1"]["mail"].value;
+			var atposition=mail.indexOf("@");  
+			var dotposition=mail.lastIndexOf("."); 
+			 if(atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length) { 
+  				alert("Please enter a valid e-mail address ");  
+  				return false;  
+  }  
+		}
+	</script>
+</head>
+<body>
+<header>
+	<div class="main"> 
+		<div class="logo">
+			<img src="logo.jpg">
+		</div>
+		<ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#intro">Book Ticket</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#contact">Contact Us</a></li>
+		</ul>
+	</div>
+	<div class="title">
+		<h1>Book My Ticket</h1>
+	</div>
+</header>
+<section id="intro">
+	<div id="dintro">
+		<p class="introd">
+			BookMyTicket offers showtimes, movie tickets, reviews, trailers, concert tickets and events near you . Also features promotional offers, coupons and mobile app.
+		</p>
+	</div>
+</section>
+<section id="contact">
+	<div class="bot">
+	<h1 align="center">Contact Us</h1>
+	</div>
+	<div class="contactus">
+		<form method="post" id="register" name="form1" action="db.php" onsubmit="return validateform()">
+			First Name: <input type="text" name="firstname" id="fname" placeholder="Enter your First Name "> <br>
+			Last Name: <input type="text" name="lastname" id="lame" placeholder="Enter your Last Name"><br>
+			Mobile No.: <input type="number" name="mobileno" id="cont" placeholder="Enter Mobile Number"><br>
+			Email Id: <input type="text" name="email" id ="mail" placeholder="Enter Email Address"><br>
+			Query: <textarea id="query" name="query" placeholder="Enter your message here" rows=6 cols="50"></textarea><br>
+			<div class="button">
+				<input type="submit" value="Submit" id="sub" >
+			</div>
+		</form>
+	</div>
+</section>
+</body>
+</html>
